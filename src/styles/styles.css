@@ -1,0 +1,44 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    width:100%;
+    background-color: black;
+}
+.body-pokemon{
+    width:98%;
+    padding:1%;
+    background-color: violet;
+}
+.box-pokemon{
+    width:33%;
+    height: 100px;
+    background-color: green;
+}
+.box-pokemon a{
+    width:100%;
+    height:100%;
+}
+.box-pokemon {
+    
+}
+.box-link{
+    display: flex;
+    flex-wrap: wrap;
+}
+#caja-1{
+    width: 100%;
+    height:25%;
+    background-color: black
+}
+#caja-2{
+    width: 50%;
+    height:25%;
+    background-color:red;
+}
+#caja-3{
+    width: 50%;
+    height:25%;
+    background-color:blue;
+}
