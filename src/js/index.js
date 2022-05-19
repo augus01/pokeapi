@@ -2,33 +2,38 @@ let d = document
 
 let pokemonList = d.querySelector(".body-pokemon")
 
-let a = 152
-let b = 250
+let a = 400
+let b = 555
 
 let dataPokemon = []
-
-// fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
-//     .then(res => res.json())
-//     .then(results => (dataPokemon = results.results))
-//     .then(() => printPokedex(dataPokemon))
-
+let img = []
+let types = []
 
 function fetchPokemon(id) {
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
         .then(res => res.json())
         .then(results => {
+            
             dataPokemon.push(results)
+            img.push(results.sprites.front_default)
+            
+            types.push(results.types.name)
+
             printPokedex(results)
-            console.log(dataPokemon)
+            return results.types
         })
+        .then(res => {
+            console.log(res)
+            
+        })
+        
 }
 
 function fetchPokemons(a, b) {
-    for (let i = 152; i <= 150 + 101; i++) {
+    for (let i = a; i <= b; i++) {
         fetchPokemon(i);
     }
 }
-
 
 let printPokedex = (pokemon) => {
 
@@ -44,7 +49,8 @@ let printPokedex = (pokemon) => {
 
         let Box3 = d.createElement("div")
         let Box3Img = d.createElement("img")
-
+        
+        
         BoxNexus.classList.add("box-pokemon")
         BoxNexus.setAttribute("id", "box-pokemon")
 
@@ -66,7 +72,7 @@ let printPokedex = (pokemon) => {
         Box3.classList.add("ImgZone")
         Box3.setAttribute("id", "caja-3")
         Box3Img.classList.add("ImgPoke")
-        Box3Img.src = pokemon.sprite
+        
   
         pokemonList.appendChild(BoxNexus)
         BoxNexus.appendChild(BoxLink)
@@ -81,40 +87,24 @@ let printPokedex = (pokemon) => {
 
         BoxLink.appendChild(Box3)
         Box3.appendChild(Box3Img)
-
+        
+        img.forEach(element => {
+            Box3Img.setAttribute("src", `${element}`)
+        });
+        pokemon.types.forEach(element => {
+            Box2Type.textContent = `#${element}`
+        });
+        
         Box1Name.textContent = `#${pokemon.name}` //usar interpolación ${}
         Box1Id.textContent = `#${pokemon.id}`
-        Box2Type.textContent = `#${pokemon.type}`
+        
         Box2Weight.textContent = `#${pokemon.weight}`
-        // Box3Img.setAttribute("src", `#${pokemon.img}`)
-
+        
         
 
-        // let divContainer = d.createElement("div")
-        // let containerA = d.createElement("a")
-        // let containerName = d.createElement("div")
-        // let pokemonName = d.createElement("span")
-        // let pokemonId = d.createElement("span")
-        // let containerData = d.createElement("div")
-        // let pokemonType = d.createElement("div")
-        // let pokemonWeight = d.createElement("div")
-        // let containerImg = d.createElement("div")
-        // let pokemonImg = d.createElement("img")
         
-        // divContainer.classList.add("containerCard")
-        // containerA.classList.add("containerLink")
-        // containerName.classList.add("namePokemon")
-        // containerData.classList.add("dataPokemon")
-        // pokemonType.classList.add("typePokemon")
-        // pokemonWeight.classList.add("weightPokemon")
-        // containerImg.classList.add("containerImg")
+        
 
-        // pokemonList.appendChild(divContainer)
-        // divContainer.append(containerName, containerData, containerImg)
-        // containerName.append(pokemonName, pokemonId)
-        // containerData.append(pokemonType, pokemonWeight)
-        // containerImg.appendChild(imgPokemon)
-    
 }
 
 function removeChild(parent) {
