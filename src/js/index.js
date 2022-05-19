@@ -24,7 +24,7 @@ function fetchPokemon(id) {
 }
 
 function fetchPokemons(a, b) {
-    for (let i = 152; i <= 150 + 101; i++) {
+    for (let i = 152; i <= 251; i++) {
         fetchPokemon(i);
     }
 }
@@ -82,11 +82,12 @@ let printPokedex = (pokemon) => {
         BoxLink.appendChild(Box3)
         Box3.appendChild(Box3Img)
 
-        Box1Name.textContent = `#${pokemon.name}` //usar interpolación ${}
-        Box1Id.textContent = `#${pokemon.id}`
+        Box1Name.textContent = `${pokemon.name}` //usar interpolación ${}
+        Box1Id.textContent = `${pokemon.id}`
         Box2Type.textContent = `#${pokemon.type}`
-        Box2Weight.textContent = `#${pokemon.weight}`
-        // Box3Img.setAttribute("src", `#${pokemon.img}`)
+        Box2Weight.textContent = `${pokemon.weight}`
+        Box3Img.setAttribute("src", `${pokemon.sprite}`)
+
 
         
 
