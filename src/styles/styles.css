@@ -71,20 +71,6 @@ body {
   color: rgb(227, 52, 116);
   font-weight: bold;
 }
-/* .navbar-regions button a:hover{
-    color
-    background: radial-gradient(
-        circle farthest-corner at 40% 25%,
-        rgb(255,0,0)  12.5%,
-        rgb(218,165,32) 12.5%,
-        rgb(50,205,50)  12.5%,
-        rgb(252,114,228) 12.5%,
-        rgb(242,242,242) 12.5%,
-        rgb(123,0,2) 12.5%,
-        rgb(245,148,29) 12.5%,
-        rgb(227,52,116) 12.5%
-    );
-} */
 .body-pokemon {
   display: flex;
   flex-wrap: wrap;
