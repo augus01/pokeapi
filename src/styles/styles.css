@@ -1,70 +1,249 @@
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+  margin: 0px;
+  padding: 0px;
 }
-body{
-    width:100%;
-    background-color: black;
+body {
+  width: 100%;
+  padding-top: 15px;
+}
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 18px;
+  border-bottom: solid 1px #000;
+}
+.nav-bar h1 {
+  font-family: "Press Start 2P";
+}
+.navbar-regions {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 70%;
+}
+.navbar-regions button {
+  margin-top: 10px;
+  width: 15%;
+  border-radius: 50px 50px;
+  color: #000;
+  font-weight: 500;
+  background: none;
+  border: 0px solid #fff;
+  padding: 1%;
+}
+.navbar-regions button a {
+  text-decoration: none;
+  color: #000;
+  font-family: "Rubik", sans-serif;
+  transition: all 0.5s;
+}
+.navbar-regions #kanto a:hover {
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+}
+.navbar-regions #johto a:hover {
+  color: rgb(218, 165, 32);
+  font-weight: bold;
+}
+.navbar-regions #hoenn a:hover {
+  color: rgb(50, 205, 50);
+  font-weight: bold;
+}
+.navbar-regions #sinnoh a:hover {
+  color: rgb(252, 114, 228);
+  font-weight: bold;
+}
+.navbar-regions #teselia a:hover {
+  color: rgb(191, 188, 188);
+  font-weight: bold;
+}
+.navbar-regions #kalos a:hover {
+  color: rgb(123, 0, 2);
+  font-weight: bold;
+}
+.navbar-regions #alola a:hover {
+  color: rgb(245, 148, 29);
+  font-weight: bold;
+}
+.navbar-regions #galar a:hover {
+  color: rgb(227, 52, 116);
+  font-weight: bold;
+}
+/* .navbar-regions button a:hover{
+    color
+    background: radial-gradient(
+        circle farthest-corner at 40% 25%,
+        rgb(255,0,0)  12.5%,
+        rgb(218,165,32) 12.5%,
+        rgb(50,205,50)  12.5%,
+        rgb(252,114,228) 12.5%,
+        rgb(242,242,242) 12.5%,
+        rgb(123,0,2) 12.5%,
+        rgb(245,148,29) 12.5%,
+        rgb(227,52,116) 12.5%
+    );
+} */
+.body-pokemon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 }
 
-.body-pokemon{
-    display: flex;
-    flex-wrap: wrap;
-
-    width:98%;
-    padding:1%;
-    background-color: violet;
-}
-
-.box-pokemon{
-    width: 30%;
-    height: 100%;
-    margin: 1%;
-    background-color: green;
-
-}
-
-.box-pokemon a{
-    width:100%;
-    height:100%;
-}
 .box-pokemon {
-    
+  width: 30%;
+  height: 100%;
+  margin: 1%;
 }
-.box-link{
-    display: flex;
-    flex-wrap: wrap;
+.box-link {
+  display: flex;
+  flex-wrap: wrap;
+  text-decoration: none;
+  color: #fff;
 }
-
-#caja-1{
-    width: 100%;
-    height:25%;
-    background-color: black
+.box-pokemon:hover {
+  transition: all 0.5s ease-in-out;
+  margin-top: -52px;
 }
-#caja-2{
-    width: 50%;
-    height: 25%;
-    background-color:red;
-}
-#caja-3{
-    width: 50%;
-    height:25%;
-    background-color:blue;
+.box-pokemon a {
 }
 
+#caja-1 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 25px;
+  background-color: black;
+  font-family: "Press Start 2P";
+  font-size: 11px;
+  word-spacing: 3px;
+  text-transform: capitalize;
+}
+#caja-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: auto;
+}
+#caja-3 {
+  width: 50%;
+  height: 25%;
+}
+.WeightPoke {
+  font-weight: bold;
+}
 .NameIdZone {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-evenly;
 }
-
+.TypePoke {
+  display: flex;
+  flex-wrap: wrap;
+}
+.typePokemon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 35px;
+  margin: 7px;
+  opacity: 0.7;
+  z-index: 4;
+  list-style-type: none;
+  background-color: #fff;
+  text-transform: capitalize;
+  border-radius: 15px;
+}
+.typePokemon p {
+  font-family: "Koulen", cursive;
+  position: absolute;
+  z-index: 5;
+  opacity: 0.9;
+  color: #000;
+  font-weight: bold;
+  background-color: #fff;
+}
+.WeightPoke {
+  color: rgb(68, 68, 68);
+  font-family: "Kanit", sans-serif;
+}
+.AbilitiesPoke {
+  font-family: "Kanit", sans-serif;
+  font-weight: bold;
+  color: rgb(68, 68, 68);
+  text-align: center;
+}
+.abilityPoke {
+  list-style-type: none;
+}
+.abilityPoke p {
+  font-weight: 500;
+  text-transform: capitalize;
+  color: rgb(68, 68, 68);
+  font-size: 12px;
+  text-align: center;
+}
 .ImgZone {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .ImgPoke {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-regions {
     display: flex;
+    flex-wrap: wrap;
+  }
+  .navbar-regions button {
+    
+    width: 25%;
+    
+  }
+  .body-pokemon {
+    width: 98%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .box-pokemon {
+    width: 45%;
+    height: 100%;
+    margin: 1%;
+  }
+  .box-link {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+    color: #fff;
+  }
+  .TypeWeightZone {
+    order: 2;
+  }
+  .ImgZone {
+    width: 100%;
+    order: 1;
+  }
+  .WeightPoke {
+    font-size: 14px;
+  }
+  .ImgPoke {
+    width: 100%;
+    height: 70px;
+  }
 }
